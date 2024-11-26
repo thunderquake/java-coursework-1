@@ -2,24 +2,40 @@ package org.app;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Client extends User {
-    private List<Service> assignedServices;
+    private UUID clientId;
+    private List<Service> linkedServices;
 
     public Client(String fullName, String phone) {
         super(fullName, phone);
-        this.assignedServices = new ArrayList<>();
+        this.clientId = UUID.randomUUID();
+        this.linkedServices = new ArrayList<>();
     }
 
-    public List<Service> getAssignedServices() {
-        return assignedServices;
+    // Getters
+    public UUID getClientId() {
+        return clientId;
     }
 
+    public List<Service> getLinkedServices() {
+        return linkedServices;
+    }
+
+    // Link or unlink services
     public void addService(Service service) {
-        assignedServices.add(service);
+        if (!linkedServices.contains(service)) {
+            linkedServices.add(service);
+        }
     }
 
     public void removeService(Service service) {
-        assignedServices.remove(service);
+        linkedServices.remove(service);
+    }
+
+    @Override
+    public String toString() {
+        return getFullName();
     }
 }

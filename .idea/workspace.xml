@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67be6975-1dcc-45c7-b383-ce69d21e7975" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/app/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/app/Master.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/app/OrderTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/app/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/app/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="67be6975-1dcc-45c7-b383-ce69d21e7975" name="Changes" comment="feat: add interface with crud functionality">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/app/ClientDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/app/MasterDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/app/ServiceUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Master.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/ServiceDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/ServiceDialog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +26,31 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java-coursework-1" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java-coursework-1" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -36,49 +61,52 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "thunderquake"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;thunderquake&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/thunderquake/java-coursework-1.git",
-    "accountId": "e52a794f-5c45-4cb5-9047-708937a90719"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/thunderquake/java-coursework-1.git&quot;,
+    &quot;accountId&quot;: &quot;e52a794f-5c45-4cb5-9047-708937a90719&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2pLP2spSlzmB8AMRZVq3QX9qix4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.C:/Users/looov/IdeaProjects/java-coursework-1.executor": "Run",
-    "Gradle.java-coursework-1 [:org.app.Main.main()].executor": "Run",
-    "Gradle.java-coursework-1 [:org.example.Main.main()].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/looov/IdeaProjects/java-coursework-1/src/main/java/org/app",
-    "onboarding.tips.debug.path": "C:/Users/looov/IdeaProjects/java-coursework-1/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.C:/Users/looov/IdeaProjects/java-coursework-1.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-coursework-1 [:org.app.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-coursework-1 [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/looov/IdeaProjects/java-coursework-1/src/main/java/org/app&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/looov/IdeaProjects/java-coursework-1/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\looov\IdeaProjects\java-coursework-1\src\main\java\org\app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\looov\IdeaProjects\java-coursework-1\src\main\resources" />
     </key>
   </component>
   <component name="RunManager">
@@ -126,11 +154,20 @@
       <option name="project" value="LOCAL" />
       <updated>1732542645340</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add interface with crud functionality">
+      <option name="closed" value="true" />
+      <created>1732550618359</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732550618359</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="feat: add interface with crud functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add interface with crud functionality" />
   </component>
 </project>

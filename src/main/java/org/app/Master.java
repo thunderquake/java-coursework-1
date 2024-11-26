@@ -1,28 +1,41 @@
 package org.app;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
 public class Master extends User {
-    private String address;
-    private String specialization;
+    private UUID masterId;
+    private List<Service> linkedServices;
 
-    public Master(String xeroxPlaceName, String fullName, String phone, String address, String specialization) {
+    public Master(String fullName, String phone) {
         super(fullName, phone);
-        this.address = address;
-        this.specialization = specialization;
+        this.masterId = UUID.randomUUID();
+        this.linkedServices = new ArrayList<>();
     }
 
-    public String getAddress() {
-        return address;
+    // Getters
+    public UUID getMasterId() {
+        return masterId;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public List<Service> getLinkedServices() {
+        return linkedServices;
     }
 
-    public String getSpecialization() {
-        return specialization;
+    // Link or unlink services
+    public void addService(Service service) {
+        if (!linkedServices.contains(service)) {
+            linkedServices.add(service);
+        }
     }
 
-    public void setSpecialization(String specialization) {
-        this.specialization = specialization;
+    public void removeService(Service service) {
+        linkedServices.remove(service);
+    }
+
+    @Override
+    public String toString() {
+        return getFullName();
     }
 }
