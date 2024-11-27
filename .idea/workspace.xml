@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67be6975-1dcc-45c7-b383-ce69d21e7975" name="Changes" comment="feat: add tabs to interface">
+    <list default="true" id="67be6975-1dcc-45c7-b383-ce69d21e7975" name="Changes" comment="feat: improve interface, add methods from task">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/ClientDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/ClientDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Master.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/MasterDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/MasterDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/ServiceDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/ServiceDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/ServiceUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/ServiceUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Service.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,13 +162,22 @@
       <option name="project" value="LOCAL" />
       <updated>1732634175727</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: improve interface, add methods from task">
+      <option name="closed" value="true" />
+      <created>1732724424503</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732724424503</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="feat: add interface with crud functionality" />
     <MESSAGE value="feat: add tabs to interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add tabs to interface" />
+    <MESSAGE value="feat: improve interface, add methods from task" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: improve interface, add methods from task" />
   </component>
 </project>

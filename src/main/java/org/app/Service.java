@@ -73,8 +73,4 @@ public class Service {
         this.client = client;
     }
 
-    @Override
-    public String toString() {
-        return name;
-    }
 }
