@@ -14,7 +14,6 @@ public class Client extends User {
         this.linkedServices = new ArrayList<>();
     }
 
-    // Getters
     public UUID getClientId() {
         return clientId;
     }
@@ -23,7 +22,6 @@ public class Client extends User {
         return linkedServices;
     }
 
-    // Link or unlink services
     public void addService(Service service) {
         if (!linkedServices.contains(service)) {
             linkedServices.add(service);

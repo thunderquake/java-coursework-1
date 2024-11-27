@@ -21,7 +21,6 @@ public class Service {
         this.client = client;
     }
 
-    // Getters
     public UUID getServiceId() {
         return serviceId;
     }
@@ -50,7 +49,6 @@ public class Service {
         return client;
     }
 
-    // Setters
     public void setName(String name) {
         this.name = name;
     }

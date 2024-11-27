@@ -14,26 +14,39 @@ public class ClientDialog extends JDialog {
         super(parent, "Client Details", true);
         this.client = client;
 
-        setLayout(new GridLayout(3, 2));
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.anchor = GridBagConstraints.WEST;
 
-        // Client name field
-        add(new JLabel("Client Name:"));
-        clientNameField = new JTextField(client != null ? client.getFullName() : "");
-        add(clientNameField);
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        add(new JLabel("Client Name:"), gbc);
 
-        // Client phone number field
-        add(new JLabel("Phone Number:"));
-        clientPhoneField = new JTextField(client != null ? client.getPhone() : "");
-        add(clientPhoneField);
+        gbc.gridx = 1;
+        clientNameField = new JTextField(client != null ? client.getFullName() : "", 20);
+        add(clientNameField, gbc);
 
-        // Buttons
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        add(new JLabel("Phone Number:"), gbc);
+
+        gbc.gridx = 1;
+        clientPhoneField = new JTextField(client != null ? client.getPhone() : "", 20);
+        add(clientPhoneField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 1;
         JButton saveButton = new JButton("Save");
         saveButton.addActionListener(this::onSave);
-        add(saveButton);
+        add(saveButton, gbc);
 
+        gbc.gridx = 1;
         JButton cancelButton = new JButton("Cancel");
         cancelButton.addActionListener(e -> dispose());
-        add(cancelButton);
+        add(cancelButton, gbc);
 
         pack();
         setLocationRelativeTo(parent);
@@ -44,12 +57,12 @@ public class ClientDialog extends JDialog {
         String phone = clientPhoneField.getText().trim();
 
         if (name.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Client name cannot be empty.");
+            JOptionPane.showMessageDialog(this, "Client name cannot be empty");
             return;
         }
 
         if (phone.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Phone number cannot be empty.");
+            JOptionPane.showMessageDialog(this, "Phone number cannot be empty");
             return;
         }
 

@@ -23,50 +23,45 @@ public class ServiceDialog extends JDialog {
 
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(5, 5, 5, 5); // Padding between components
+        gbc.insets = new Insets(5, 5, 5, 5);
         gbc.anchor = GridBagConstraints.WEST;
 
-        // Service Name
         gbc.gridx = 0;
         gbc.gridy = 0;
         add(new JLabel("Service Name:"), gbc);
 
         gbc.gridx = 1;
         serviceNameField = new JTextField(service != null ? service.getName() : "");
-        serviceNameField.setPreferredSize(new Dimension(250, 25));  // Wider input field
+        serviceNameField.setPreferredSize(new Dimension(250, 25));
         add(serviceNameField, gbc);
 
-        // Service Type
         gbc.gridx = 0;
         gbc.gridy = 1;
         add(new JLabel("Service Type:"), gbc);
 
         gbc.gridx = 1;
         serviceTypeField = new JTextField(service != null ? service.getType() : "");
-        serviceTypeField.setPreferredSize(new Dimension(250, 25));  // Wider input field
+        serviceTypeField.setPreferredSize(new Dimension(250, 25));
         add(serviceTypeField, gbc);
 
-        // Service Price
         gbc.gridx = 0;
         gbc.gridy = 2;
         add(new JLabel("Service Price:"), gbc);
 
         gbc.gridx = 1;
         servicePriceField = new JTextField(service != null ? String.valueOf(service.getPrice()) : "");
-        servicePriceField.setPreferredSize(new Dimension(250, 25));  // Wider input field
+        servicePriceField.setPreferredSize(new Dimension(250, 25));
         add(servicePriceField, gbc);
 
-        // Order Date
         gbc.gridx = 0;
         gbc.gridy = 3;
         add(new JLabel("Order Date (DD-MM-YYYY):"), gbc);
 
         gbc.gridx = 1;
         orderDateField = new JTextField(service != null && service.getOrderTime() != null ? service.getOrderTime().getDate() : "");
-        orderDateField.setPreferredSize(new Dimension(250, 25));  // Wider input field
+        orderDateField.setPreferredSize(new Dimension(250, 25));
         add(orderDateField, gbc);
 
-        // Start Time (Split Hour and Minute)
         gbc.gridx = 0;
         gbc.gridy = 4;
         add(new JLabel("Start Time:"), gbc);
@@ -78,13 +73,12 @@ public class ServiceDialog extends JDialog {
         startHourField = new JTextField("", 2);
         startMinuteField = new JTextField("", 2);
 
-        // If a service is passed, split the start time into hours and minutes
         if (service != null && service.getOrderTime() != null) {
-            String startTime = service.getOrderTime().getStartTime();  // e.g. "14:30"
+            String startTime = service.getOrderTime().getStartTime();
             String[] timeParts = startTime.split(":");
             if (timeParts.length == 2) {
-                startHourField.setText(timeParts[0]);  // Set hour
-                startMinuteField.setText(timeParts[1]);  // Set minute
+                startHourField.setText(timeParts[0]);
+                startMinuteField.setText(timeParts[1]);
             }
         }
 
@@ -93,7 +87,6 @@ public class ServiceDialog extends JDialog {
         startTimePanel.add(startMinuteField);
         add(startTimePanel, gbc);
 
-        // End Time (Split Hour and Minute)
         gbc.gridx = 0;
         gbc.gridy = 5;
         add(new JLabel("End Time:"), gbc);
@@ -105,13 +98,12 @@ public class ServiceDialog extends JDialog {
         endHourField = new JTextField("", 2);
         endMinuteField = new JTextField("", 2);
 
-        // If a service is passed, split the end time into hours and minutes
         if (service != null && service.getOrderTime() != null) {
-            String endTime = service.getOrderTime().getEndTime();  // e.g. "16:30"
+            String endTime = service.getOrderTime().getEndTime();
             String[] timeParts = endTime.split(":");
             if (timeParts.length == 2) {
-                endHourField.setText(timeParts[0]);  // Set hour
-                endMinuteField.setText(timeParts[1]);  // Set minute
+                endHourField.setText(timeParts[0]);
+                endMinuteField.setText(timeParts[1]);
             }
         }
 
@@ -120,7 +112,6 @@ public class ServiceDialog extends JDialog {
         endTimePanel.add(endMinuteField);
         add(endTimePanel, gbc);
 
-        // Master Selection
         gbc.gridx = 0;
         gbc.gridy = 6;
         add(new JLabel("Select Master:"), gbc);
@@ -132,7 +123,6 @@ public class ServiceDialog extends JDialog {
         }
         add(masterComboBox, gbc);
 
-        // Client Selection
         gbc.gridx = 0;
         gbc.gridy = 7;
         add(new JLabel("Select Client:"), gbc);
@@ -144,9 +134,8 @@ public class ServiceDialog extends JDialog {
         }
         add(clientComboBox, gbc);
 
-        // Buttons Panel (Centered)
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER));  // Align buttons to the center
+        buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         JButton saveButton = new JButton("Save");
         saveButton.addActionListener(this::onSave);
@@ -156,10 +145,9 @@ public class ServiceDialog extends JDialog {
         cancelButton.addActionListener(e -> dispose());
         buttonPanel.add(cancelButton);
 
-        // Add button panel to the grid with constraints for centering
         gbc.gridx = 0;
         gbc.gridy = 8;
-        gbc.gridwidth = 2; // Span across both columns
+        gbc.gridwidth = 2;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         add(buttonPanel, gbc);
 
@@ -179,11 +167,10 @@ public class ServiceDialog extends JDialog {
         Master selectedMaster = (Master) masterComboBox.getSelectedItem();
         Client selectedClient = (Client) clientComboBox.getSelectedItem();
 
-        // Validation
         if (name.isEmpty() || type.isEmpty() || priceText.isEmpty() || orderDate.isEmpty() ||
                 startHour.isEmpty() || startMinute.isEmpty() || endHour.isEmpty() || endMinute.isEmpty() ||
                 selectedMaster == null || selectedClient == null) {
-            JOptionPane.showMessageDialog(this, "All fields must be filled.");
+            JOptionPane.showMessageDialog(this, "All fields must be filled");
             return;
         }
 
@@ -194,23 +181,20 @@ public class ServiceDialog extends JDialog {
             endH = Integer.parseInt(endHour);
             endM = Integer.parseInt(endMinute);
         } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(this, "Invalid time format. Please enter valid numbers for hours and minutes.");
+            JOptionPane.showMessageDialog(this, "Enter valid numbers for hours and minutes");
             return;
         }
 
-        // Validate time ranges
         if (startH < 0 || startH > 23 || startM < 0 || startM > 59 || endH < 0 || endH > 23 || endM < 0 || endM > 59) {
-            JOptionPane.showMessageDialog(this, "Time must be in the format hh:mm where hh is 0-23 and mm is 0-59.");
+            JOptionPane.showMessageDialog(this, "Time must be in the format hh:mm where hh is 0-23 and mm is 0-59");
             return;
         }
 
-        // Validate the order date format (DD-MM-YYYY)
         if (!isValidDate(orderDate)) {
-            JOptionPane.showMessageDialog(this, "Invalid date format. Please enter a valid date in the format DD-MM-YYYY.");
+            JOptionPane.showMessageDialog(this, "Enter a valid date in the format DD-MM-YYYY");
             return;
         }
 
-        // Create OrderTime object
         OrderTime orderTime = new OrderTime(startHour + ":" + startMinute, endHour + ":" + endMinute, orderDate);
 
         if (service == null) {
@@ -229,7 +213,6 @@ public class ServiceDialog extends JDialog {
     }
 
     private boolean isValidDate(String date) {
-        // Simple validation for date in the format DD-MM-YYYY
         String[] dateParts = date.split("-");
         if (dateParts.length != 3) {
             return false;
@@ -240,17 +223,14 @@ public class ServiceDialog extends JDialog {
             int month = Integer.parseInt(dateParts[1]);
             int year = Integer.parseInt(dateParts[2]);
 
-            // Validate day and month ranges
-            if (day < 1 || day > 31 || month < 1 || month > 12) {
+            if (day < 1 || month < 1 || month > 12) {
                 return false;
             }
 
-            // Check month-specific validation (simplified)
-            if (month == 2 && day > 29) return false;  // Feb cannot have more than 29 days
-            if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 30) return false;  // Apr, Jun, Sep, Nov cannot have more than 30 days
-            if (day > 31) return false;  // Months like Jan, Mar, etc. cannot have more than 31 days
+            if (month == 2 && day > 29) return false;
+            if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 30) return false;
+            if (day > 31) return false;
 
-            // Optionally, we could add logic to check leap years here if needed
 
         } catch (NumberFormatException ex) {
             return false;
