@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67be6975-1dcc-45c7-b383-ce69d21e7975" name="Changes" comment="feat: improve interface, add methods from task">
+    <list default="true" id="67be6975-1dcc-45c7-b383-ce69d21e7975" name="Changes" comment="feat: add test file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Master.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Service.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732724424503</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: add test file">
+      <option name="closed" value="true" />
+      <created>1732731062632</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732731062632</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -178,6 +188,7 @@
     <MESSAGE value="feat: add interface with crud functionality" />
     <MESSAGE value="feat: add tabs to interface" />
     <MESSAGE value="feat: improve interface, add methods from task" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: improve interface, add methods from task" />
+    <MESSAGE value="feat: add test file" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add test file" />
   </component>
 </project>

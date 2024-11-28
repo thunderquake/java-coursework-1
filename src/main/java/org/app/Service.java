@@ -3,7 +3,6 @@ package org.app;
 import java.util.UUID;
 
 public class Service {
-    private UUID serviceId;
     private String name;
     private String type;
     private double price;
@@ -12,7 +11,6 @@ public class Service {
     private Client client;
 
     public Service(String name, String type, double price, OrderTime orderTime, Master master, Client client) {
-        this.serviceId = UUID.randomUUID();
         this.name = name;
         this.type = type;
         this.price = price;
@@ -21,9 +19,6 @@ public class Service {
         this.client = client;
     }
 
-    public UUID getServiceId() {
-        return serviceId;
-    }
 
     public String getName() {
         return name;

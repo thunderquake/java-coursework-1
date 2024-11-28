@@ -2,17 +2,14 @@ package org.app;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class Master extends User {
-    private UUID masterId;
     private List<Service> linkedServices;
     private String address;
     private String specialization;
 
     public Master(String fullName, String phone, String address, String specialization) {
         super(fullName, phone);
-        this.masterId = UUID.randomUUID();
         this.linkedServices = new ArrayList<>();
         this.address = address;
         this.specialization = specialization;
@@ -34,9 +31,6 @@ public class Master extends User {
         this.specialization = specialization;
     }
 
-    public UUID getMasterId() {
-        return masterId;
-    }
 
     public List<Service> getLinkedServices() {
         return linkedServices;
