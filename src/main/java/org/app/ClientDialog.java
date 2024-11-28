@@ -9,10 +9,12 @@ public class ClientDialog extends JDialog {
     private JTextField clientPhoneField;
     private boolean isClientAdded = false;
     private Client client;
+    private DefaultListModel<String> existingClientNames;
 
-    public ClientDialog(JFrame parent, Client client) {
+    public ClientDialog(JFrame parent, Client client, DefaultListModel<String> existingClientNames) {
         super(parent, "Client Details", true);
         this.client = client;
+        this.existingClientNames = existingClientNames;
 
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -63,6 +65,11 @@ public class ClientDialog extends JDialog {
 
         if (phone.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Phone number cannot be empty");
+            return;
+        }
+
+        if (existingClientNames.contains(name)) {
+            JOptionPane.showMessageDialog(this, "A client with this name already exists");
             return;
         }
 

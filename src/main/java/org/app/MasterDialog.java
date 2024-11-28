@@ -7,21 +7,23 @@ import java.awt.event.ActionEvent;
 public class MasterDialog extends JDialog {
     private JTextField masterNameField;
     private JTextField masterPhoneField;
-    private JTextField masterAddressField; // Нове поле для адреси
-    private JTextField masterSpecializationField; // Нове поле для спеціалізації
+    private JTextField masterAddressField;
+    private JTextField masterSpecializationField;
     private boolean isMasterAdded = false;
     private Master master;
+    private DefaultListModel<String> existingMasterNames;
 
-    public MasterDialog(JFrame parent, Master master) {
+    public MasterDialog(JFrame parent, Master master, DefaultListModel<String> existingMasterNames) {
         super(parent, "Master Details", true);
         this.master = master;
+        this.existingMasterNames = existingMasterNames;
 
-        setLayout(new GridBagLayout()); // Use GridBagLayout for better spacing
+        setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(10, 10, 10, 10); // Padding around each component
-        gbc.fill = GridBagConstraints.HORIZONTAL; // Make components stretch horizontally
+        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.anchor = GridBagConstraints.WEST;
 
-        // Поле для імені майстра
         gbc.gridx = 0;
         gbc.gridy = 0;
         add(new JLabel("Master Name:"), gbc);
@@ -29,7 +31,6 @@ public class MasterDialog extends JDialog {
         masterNameField = new JTextField(master != null ? master.getFullName() : "", 20);
         add(masterNameField, gbc);
 
-        // Поле для номера телефону
         gbc.gridx = 0;
         gbc.gridy = 1;
         add(new JLabel("Phone Number:"), gbc);
@@ -37,7 +38,6 @@ public class MasterDialog extends JDialog {
         masterPhoneField = new JTextField(master != null ? master.getPhone() : "", 20);
         add(masterPhoneField, gbc);
 
-        // Поле для адреси
         gbc.gridx = 0;
         gbc.gridy = 2;
         add(new JLabel("Address:"), gbc);
@@ -45,7 +45,6 @@ public class MasterDialog extends JDialog {
         masterAddressField = new JTextField(master != null ? master.getAddress() : "", 20);
         add(masterAddressField, gbc);
 
-        // Поле для спеціалізації
         gbc.gridx = 0;
         gbc.gridy = 3;
         add(new JLabel("Specialization:"), gbc);
@@ -53,7 +52,6 @@ public class MasterDialog extends JDialog {
         masterSpecializationField = new JTextField(master != null ? master.getSpecialization() : "", 20);
         add(masterSpecializationField, gbc);
 
-        // Кнопки
         gbc.gridx = 0;
         gbc.gridy = 4;
         gbc.gridwidth = 1;
@@ -93,6 +91,12 @@ public class MasterDialog extends JDialog {
 
         if (specialization.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Specialization cannot be empty");
+            return;
+        }
+
+        // Check if the master name already exists
+        if (existingMasterNames.contains(name)) {
+            JOptionPane.showMessageDialog(this, "A master with this name already exists");
             return;
         }
 

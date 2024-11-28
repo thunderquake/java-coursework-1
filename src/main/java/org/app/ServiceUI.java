@@ -316,7 +316,7 @@ public class ServiceUI extends JFrame {
                 }
                 break;
             case "Masters":
-                MasterDialog masterDialog = new MasterDialog(this, null);
+                MasterDialog masterDialog = new MasterDialog(this, null, masterModel);
                 masterDialog.setVisible(true);
                 if (masterDialog.isMasterAdded()) {
                     masters.add(masterDialog.getMaster());
@@ -324,7 +324,7 @@ public class ServiceUI extends JFrame {
                 }
                 break;
             case "Clients":
-                ClientDialog clientDialog = new ClientDialog(this, null);
+                ClientDialog clientDialog = new ClientDialog(this, null, clientModel);
                 clientDialog.setVisible(true);
                 if (clientDialog.isClientAdded()) {
                     clients.add(clientDialog.getClient());
@@ -366,7 +366,7 @@ public class ServiceUI extends JFrame {
             case "Masters":
                 Master master = findMasterByName(selectedItem);
                 if (master != null) {
-                    MasterDialog masterDialog = new MasterDialog(this, master);
+                    MasterDialog masterDialog = new MasterDialog(this, master, masterModel);
                     masterDialog.setVisible(true);
                     if (masterDialog.isMasterAdded()) {
                         refreshAllTabs();
@@ -377,7 +377,7 @@ public class ServiceUI extends JFrame {
             case "Clients":
                 Client client = findClientByName(selectedItem);
                 if (client != null) {
-                    ClientDialog clientDialog = new ClientDialog(this, client);
+                    ClientDialog clientDialog = new ClientDialog(this, client, clientModel);
                     clientDialog.setVisible(true);
                     if (clientDialog.isClientAdded()) {
                         refreshAllTabs();
