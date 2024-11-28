@@ -174,6 +174,18 @@ public class ServiceDialog extends JDialog {
             return;
         }
 
+        double price = 0.0;
+        try {
+            price = Double.parseDouble(priceText);
+            if (price < 0) {
+                JOptionPane.showMessageDialog(this, "Price must be a positive number");
+                return;
+            }
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this, "Enter a valid price");
+            return;
+        }
+
         int startH, startM, endH, endM;
         try {
             startH = Integer.parseInt(startHour);

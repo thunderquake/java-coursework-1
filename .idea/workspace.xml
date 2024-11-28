@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67be6975-1dcc-45c7-b383-ce69d21e7975" name="Changes" comment="feat: add test file">
+    <list default="true" id="67be6975-1dcc-45c7-b383-ce69d21e7975" name="Changes" comment="fix: bug fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/ClientDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/ClientDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/MasterDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/MasterDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/ServiceUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/ServiceUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/ServiceDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/ServiceDialog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732731062632</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix: bug fixes">
+      <option name="closed" value="true" />
+      <created>1732813610901</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732813610901</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -189,6 +195,7 @@
     <MESSAGE value="feat: add tabs to interface" />
     <MESSAGE value="feat: improve interface, add methods from task" />
     <MESSAGE value="feat: add test file" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add test file" />
+    <MESSAGE value="fix: bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: bug fixes" />
   </component>
 </project>
